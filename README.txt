@@ -1,11 +1,11 @@
 === Recent Posts Widget With Thumbnails ===
-Contributors: Hinjiriyo
+Contributors: kybernetikservices,Hinjiriyo
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKZZ3US2R56RY
 Tags: images, posts list, recent posts, thumbnails, widget
 Requires at least: 2.9
 Requires PHP: 5.2
-Tested up to: 5.6
-Stable tag: 7.0.2
+Tested up to: 5.6.1
+Stable tag: 7.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -263,6 +263,10 @@ If you want to contribute a translation of the plugin in your language it would 
 2. The second screenshot shows the widget on the Widget Management Page in the backend.
 
 == Changelog ==
+
+= 7.0.3 =
+* new branding
+* Tested successfully with WordPress 5.6.1
 
 = 7.0.2 =
 * Corrected comments in uninstall.php

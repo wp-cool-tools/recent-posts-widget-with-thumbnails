@@ -3,11 +3,11 @@
  * Plugin Name:       Recent Posts Widget With Thumbnails
  * Plugin URI:        http://wordpress.org/plugins/recent-posts-widget-with-thumbnails/
  * Description:       Small and fast plugin to display in the sidebar a list of linked titles and thumbnails of the most recent postings
- * Version:           7.0.2
+ * Version:           7.0.3
  * Requires at least: 2.9
  * Requires PHP:      5.2
- * Author:            Martin Stehle
- * Author URI:        https://stehle-internet.de/
+ * Author:            Kybernetik Services
+ * Author URI:        https://www.kybernetik-services.com/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=recent-posts-widget-with-thumbnails&utm_content=author
  * Text Domain:       recent-posts-widget-with-thumbnails
  * Domain Path:       /languages
  * License:           GPL-2.0+
