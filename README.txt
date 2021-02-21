@@ -1,6 +1,6 @@
 === Recent Posts Widget With Thumbnails ===
 Contributors: kybernetikservices,Hinjiriyo
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKZZ3US2R56RY
+Donate link: https://www.paypal.com/donate?hosted_button_id=QPDXLM24AASVG
 Tags: images, posts list, recent posts, thumbnails, widget
 Requires at least: 2.9
 Requires PHP: 5.2
