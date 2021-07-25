@@ -1,10 +1,10 @@
 <?php
 /*
  * Plugin Name:       Recent Posts Widget With Thumbnails
- * Plugin URI:        http://wordpress.org/plugins/recent-posts-widget-with-thumbnails/
+ * Plugin URI:        https://wordpress.org/plugins/recent-posts-widget-with-thumbnails/
  * Description:       Small and fast plugin to display in the sidebar a list of linked titles and thumbnails of the most recent postings
- * Version:           7.0.3
- * Requires at least: 2.9
+ * Version:           7.1.0
+ * Requires at least: 4.6
  * Requires PHP:      5.2
  * Author:            Kybernetik Services
  * Author URI:        https://www.kybernetik-services.com/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=recent-posts-widget-with-thumbnails&utm_content=author
@@ -28,7 +28,10 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 	var $use_inline_css;// class wide setting, bool type
 	var $use_no_css;	// class wide setting, bool type
 
-	function __construct() {
+    // Create the widget options and such here, then call
+    // $this->WP_Widget to let wordpress know about it.
+    function __construct() {
+
 		$language_codes = explode( '_', get_locale() );
 		switch ( $language_codes[ 0 ] ) {
 			case 'ar':
@@ -111,6 +114,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 
 	}
 
+    // display the widget on the front end.
 	function widget( $args, $instance ) {
 		global $post;
 
@@ -149,6 +153,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 			$default_url = $this->defaults[ 'thumb_url' ];
 		}
 
+		// ToDo: add option to filter custom post types as well
 		// standard params
 		$query_args = array(
 			'posts_per_page'      => $ints[ 'number_posts' ],
@@ -216,8 +221,8 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		if ( isset( $query_args[ 'category__in' ] ) and $bools[ 'keep_sticky' ] ) {
 			add_filter( 'the_posts', array( $this, 'get_stickies_on_top' ) );
 		}
-		
-		// run the query: get the latest posts
+
+        // run the query: get the latest posts
 		$r = new WP_Query( apply_filters( 'rpwwt_widget_posts_args', $query_args ) );
 
 		// remove correction function if query includes sticky posts and categories filter
@@ -309,6 +314,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 
 	}
 
+    // The widget form in the admin area.
 	function update( $new_widget_settings, $old_widget_settings ) {
 		$instance = $old_widget_settings;
 		// sanitize user input before update
@@ -360,7 +366,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 			unlink( $this->defaults[ 'css_file_path' ] );
 		}
 
-		// return sanitized current widget settings
+        // return sanitized current widget settings
 		return $instance;
 	}
 
@@ -368,6 +374,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		wp_cache_delete( $this->defaults[ 'plugin_slug' ], 'widget' );
 	}
 
+    // Saves the  data, called via AJAX. But the saving logic comes here.
 	function form( $instance ) {
 		// get and sanitize values
 		$title					= ( isset( $instance[ 'title' ] ) ) 				? $instance[ 'title' ]				: $this->defaults[ 'widget_title' ];
@@ -388,7 +395,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 			$bools[ $key ] = ( isset( $instance[ $key ] ) ) ? (bool) $instance[ $key ] : true;
 		}
 
-		// for some text fields: let there be an empty fields if desired
+        // for some text fields: let there be an empty fields if desired
 		foreach ( $this->optional_text_fields as $field ) {
 			if ( isset( $instance[ $field ] ) ) {
 				if ( '' == $instance[ $field ] ) {
@@ -423,8 +430,8 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		foreach ( array_merge( $this->ints, $this->bools_false, $this->bools_true ) as $key ) {
 			$field_ids[ $key ] = $this->get_field_id( $key );
 		}
-		
-		// get texts and values for image sizes dropdown
+
+        // get texts and values for image sizes dropdown
 		global $_wp_additional_image_sizes;
 		$wp_standard_image_size_labels = array();
 		$label = 'Full Size';	$wp_standard_image_size_labels[ 'full' ]		= __( $label );
@@ -451,7 +458,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 			// add option to options list
 			$size_options[] = $option_values;
 		}
-		
+
 		// create text to Media Settings page
 		$text = 'Settings';	$label_settings	= __( $text );
 		$text = 'Media';	$label_media	= _x( $text, 'post type general name' );
@@ -561,7 +568,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 
 		// close selection box
 		$selection_element .= "</select>\n";
-		
+
 		// print form in widgets page
 		include 'includes/form.php';
 

@@ -1,13 +1,13 @@
 === Recent Posts Widget With Thumbnails ===
 Contributors: kybernetikservices,Hinjiriyo
-Donate link: https://www.paypal.com/donate?hosted_button_id=QPDXLM24AASVG
+Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: images, posts list, recent posts, thumbnails, widget
 Requires at least: 2.9
 Requires PHP: 5.2
 Tested up to: 5.6.1
 Stable tag: 7.0.3
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 List the most recent posts with post titles, thumbnails, excerpts, authors, categories, dates and more!
 
@@ -186,7 +186,7 @@ If you have done your translation please leave a comment in the [plugin's suppor
 2. Search for 'Recent Posts Widget With Thumbnails'
 3. Click 'Install Now'
 4. Activate the plugin on the Plugin dashboard
-5. Go to 'Appereance' => 'Widgets' and select 'Recent Posts Widget With Thumbnails'
+5. Go to 'Appearance' => 'Widgets' and select 'Recent Posts Widget With Thumbnails'
 
 = Uploading in WordPress Dashboard =
 
@@ -195,7 +195,7 @@ If you have done your translation please leave a comment in the [plugin's suppor
 3. Select `recent-posts-widget-with-thumbnails.zip` from your computer
 4. Click 'Install Now'
 5. Activate the plugin in the Plugin dashboard
-6. Go to 'Appereance' => 'Widgets' and select 'Recent Posts Widget With Thumbnails'
+6. Go to 'Appearance' => 'Widgets' and select 'Recent Posts Widget With Thumbnails'
 
 = Using FTP =
 
@@ -203,7 +203,7 @@ If you have done your translation please leave a comment in the [plugin's suppor
 2. Extract the `recent-posts-widget-with-thumbnails` directory to your computer
 3. Upload the `recent-posts-widget-with-thumbnails` directory to the `/wp-content/plugins/` directory
 4. Activate the plugin in the Plugin dashboard
-5. Go to 'Appereance' => 'Widgets' and select 'Recent Posts Widget With Thumbnails'
+5. Go to 'Appearance' => 'Widgets' and select 'Recent Posts Widget With Thumbnails'
 
 == Frequently Asked Questions ==
 
@@ -253,7 +253,7 @@ If you want to contribute a translation of the plugin in your language it would 
 
 = 7.0.3 =
 * new branding
-* Tested successfully with WordPress 5.6.1
+* Tested successfully with WordPress 5.6.2
 
 = 7.0.2 =
 * Corrected comments in uninstall.php
@@ -597,7 +597,8 @@ Successfully tested with WordPress 4.0
 == Upgrade Notice ==
 
 = 7.0.2 =
-Tested successfully with WordPress 5.6
+Tested successfully with WordPress 5.6.2
+Tested successfully with WordPress 5.7
 
 = 7.0.1 =
 Added catalan translation, tested with WordPress 5.5.3
