@@ -172,25 +172,11 @@ To design the list and its items you can use these CSS selectors:
 
 = Languages =
 
-The user interface is available in
+The user interface is available in several languages.
 
-* Arabic (العربية), kindly drawn up by [Shadi AlZard](https://profiles.wordpress.org/salzard)
-* Catalan (Català), kindly drawn up by [Ibidem Group](https://www.ibidemgroup.com/)
-* Dutch (Nederlands)
-* English (UK)
-* English (US)
-* Galician
-* German (Deutsch, Deutschland)
-* Greek (Ελληνικά), kindly drawn up by Kostas Arvanitidis
-* Japanese (日本語), kindly drawn up by [Kazuyuki Kumai](https://wordpress.org/support/users/kazuyk/)
-* Persian (فارسی), kindly drawn up by [Sajjad Panahi](https://profiles.wordpress.org/asreelm)
-* Polish (Polski), kindly drawn up by [Marcin Mikolajczyk](https://profiles.wordpress.org/marcinmik)
-* Russian (ру́сский), kindly drawn up by [dmitriynn](https://profiles.wordpress.org/dmitriynn)
-* Spanish (Español, Spain)
-* Spanish (Español, Venezuela)
-* Turkish (Türkçe), kindly drawn up by [Mehmet HAKAN](https://profiles.wordpress.org/memomelo)
-
-Further translations are welcome. If you want to give in your translation please leave a notice in the [plugin's support forum](https://wordpress.org/support/plugin/recent-posts-widget-with-thumbnails).
+Starting from version 7.1.0 the handling for translations are moved to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/recent-posts-widget-with-thumbnails/).
+Please help to translate into more languages or you can re-work on the current translations, if you think it's needed.
+If you have done your translation please leave a comment in the [plugin's support forum](https://wordpress.org/support/plugin/recent-posts-widget-with-thumbnails). I'll take care of the review and approval.
 
 == Installation ==
 
@@ -255,7 +241,8 @@ If there is no text in the "Excerpt" box the plugin tries to build an excerpt vi
 
 = Where is the *.pot file for translating the plugin in any language? =
 
-If you want to contribute a translation of the plugin in your language it would be great! You would find the *.pot file in the 'languages' directory of this plugin. If you would send the *.po file to me I would include it in the next release of the plugin.
+There is not pot file coming anymore with the plugin. With version 7.1 the translation was moved to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/recent-posts-widget-with-thumbnails/).
+If you want to contribute a translation of the plugin in your language it would be great!
 
 == Screenshots ==
 

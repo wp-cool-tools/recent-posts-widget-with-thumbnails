@@ -9,9 +9,8 @@
  * Author:            Kybernetik Services
  * Author URI:        https://www.kybernetik-services.com/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=recent-posts-widget-with-thumbnails&utm_content=author
  * Text Domain:       recent-posts-widget-with-thumbnails
- * Domain Path:       /languages
  * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
 /**
@@ -100,7 +99,6 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		$widget_ops 							= array( 'classname' => $this->defaults[ 'plugin_slug' ], 'description' => $widget_desc );
 		parent::__construct( $this->defaults[ 'plugin_slug' ], $widget_name, $widget_ops );
 
-		add_action( 'admin_init',				array( $this, 'load_plugin_textdomain' ) );
 		add_action( 'save_post',				array( $this, 'flush_widget_cache' ) );
 		add_action( 'deleted_post',				array( $this, 'flush_widget_cache' ) );
 		add_action( 'switch_theme',				array( $this, 'flush_widget_cache' ) );
@@ -658,17 +656,6 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 				'all' 
 			);
 		}
-	}
-
-	/**
-	 * Load the plugin text domain for translation.
-	 *
-	 * @since    1.0.0
-	 */
-	public function load_plugin_textdomain() {
-
-		load_plugin_textdomain( 'recent-posts-widget-with-thumbnails', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-
 	}
 
 	/**
