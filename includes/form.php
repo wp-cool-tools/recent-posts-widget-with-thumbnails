@@ -10,11 +10,25 @@
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'open_new_window' ] ); ?> id="<?php echo $field_ids[ 'open_new_window' ]; ?>" name="<?php echo $this->get_field_name( 'open_new_window' ); ?>" />
 <label for="<?php echo $field_ids[ 'open_new_window' ]; ?>"><?php esc_html_e( 'Open post links in new windows?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
 
-<p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'random_order' ] ); ?> id="<?php echo $field_ids[ 'random_order' ]; ?>" name="<?php echo $this->get_field_name( 'random_order' ); ?>" />
-<label for="<?php echo $field_ids[ 'random_order' ]; ?>"><?php esc_html_e( 'Show posts in random order?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
-
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'hide_current_post' ] ); ?> id="<?php echo $field_ids[ 'hide_current_post' ]; ?>" name="<?php echo $this->get_field_name( 'hide_current_post' ); ?>" />
-<label for="<?php echo $field_ids[ 'hide_current_post' ]; ?>"><?php esc_html_e( 'Do not show the current post?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
+    <label for="<?php echo $field_ids[ 'hide_current_post' ]; ?>"><?php esc_html_e( 'Do not show the current post?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
+
+<p><label for="<?php echo $field_ids[ 'orderby' ]; ?>"><?php esc_html_e( 'Order by', 'recent-posts-widget-with-thumbnails' ); ?>:</label>
+    <select id="<?php echo $field_ids[ 'orderby' ]; ?>" name="<?php echo $this->get_field_name( 'orderby' ); ?>">
+        <option value="date" <?php selected( 'none', $option_values[ 'orderby' ] ); ?>><?php esc_html_e( 'Date (default)', 'recent-posts-widget-with-thumbnails' ); ?></option>
+        <option value="title" <?php selected( 'title', $option_values[ 'orderby' ] ); ?>><?php esc_html_e( 'Title', 'recent-posts-widget-with-thumbnails' ); ?></option>
+        <option value="modified" <?php selected( 'modified', $option_values[ 'orderby' ] ); ?>><?php esc_html_e( 'Last modified date', 'recent-posts-widget-with-thumbnails' ); ?></option>
+        <option value="menu_order" <?php selected( 'menu_order', $option_values[ 'orderby' ] ); ?>><?php esc_html_e( 'Page order', 'recent-posts-widget-with-thumbnails' ); ?></option>
+        <option value="rand" <?php selected( 'rand', $option_values[ 'orderby' ] ); ?>><?php esc_html_e( 'Random', 'recent-posts-widget-with-thumbnails' ); ?></option>
+    </select>
+</p>
+
+<p><label for="<?php echo $field_ids[ 'order' ]; ?>"><?php esc_html_e( 'Sort', 'recent-posts-widget-with-thumbnails' ); ?>:</label>
+    <select id="<?php echo $field_ids[ 'order' ]; ?>" name="<?php echo $this->get_field_name( 'order' ); ?>">
+        <option value="desc" <?php selected( 'desc', $option_values[ 'order' ] ); ?>><?php esc_html_e( 'Descending (default)', 'recent-posts-widget-with-thumbnails' ); ?></option>
+        <option value="asc" <?php selected( 'asc', $option_values[ 'order' ] ); ?>><?php esc_html_e( 'Ascending', 'recent-posts-widget-with-thumbnails' ); ?></option>
+    </select>
+</p>
 
 <h4><?php $text = 'Sticky'; esc_html_e( $text ); ?></h4>
 
@@ -140,7 +154,7 @@ foreach ( $size_options as $option ) {
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'use_default_only' ] ); ?> id="<?php echo $field_ids[ 'use_default_only' ]; ?>" name="<?php echo $this->get_field_name( 'use_default_only' ); ?>" />
 <label for="<?php echo $field_ids[ 'use_default_only' ]; ?>"><?php esc_html_e( 'Ignore all thumbnails and always use only the default thumbnail?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
 
-<p><label for="<?php echo $field_ids[ 'default_url' ]; ?>"><?php esc_html_e( 'URL of default thumbnail (start with http://)', 'recent-posts-widget-with-thumbnails' ); ?>:</label>
+<p><label for="<?php echo $field_ids[ 'default_url' ]; ?>"><?php esc_html_e( 'URL of default thumbnail (start with https://)', 'recent-posts-widget-with-thumbnails' ); ?>:</label>
 <input class="widefat" id="<?php echo $field_ids[ 'default_url' ]; ?>" name="<?php echo $this->get_field_name( 'default_url' ); ?>" type="text" value="<?php echo esc_url( $default_url ); ?>" /></p>
 
 <p><label for="<?php echo $field_ids[ 'thumb_alt' ]; ?>"><?php esc_html_e( 'Alt text of the default thumbnail:', 'recent-posts-widget-with-thumbnails' ); ?></label>

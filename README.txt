@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: images, posts list, recent posts, thumbnails, widget
 Requires at least: 2.9
 Requires PHP: 5.2
-Tested up to: 5.6.1
-Stable tag: 7.0.3
+Tested up to: 5.8
+Stable tag: 7.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,8 +14,6 @@ List the most recent posts with post titles, thumbnails, excerpts, authors, cate
 == Description ==
 
 List the most recent posts with post titles, thumbnails, excerpts, authors, categories, dates and more!
-
-The plugin is available in Dutch (Nederlands), English, Spanish (Español), Galician, German (Deutsch), Persian (فارسی), Arabic (العربية), Polish (Polski) Russian (русский), Turkish (Türkçe), Japanese (日本語), Greek (Ελληνικά) and Catalan (Català).
 
 Although the plugin is built only for widget areas users reported that it **works in Elementor** and **works in Oxygen**. Whether it runs in other page builders is unknown. Please let me know in which **page builder** you were able to use the plugin successfully.
 
@@ -58,7 +56,7 @@ Some users published video tutorials on YouTube:
 1. Title of the widget
 2. Number of listed posts
 3. Open post links in new windows
-4. Random order of posts
+4. Different options for post order and sorting
 5. Hide current post in list
 6. Show only sticky posts
 7. Hide sticky posts
@@ -250,6 +248,11 @@ If you want to contribute a translation of the plugin in your language it would 
 2. The second screenshot shows the widget on the Widget Management Page in the backend.
 
 == Changelog ==
+
+= 7.1.0 =
+* Added feature for post order and sorting (feature request: https://wordpress.org/support/topic/sort-posts-by-title/)
+* moved language files to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/recent-posts-widget-with-thumbnails/). So, please contribute as a translator to make Recent Posts Widget With Thumbnails available in more and more languages.
+* Compatibility with WordPress 5.8
 
 = 7.0.3 =
 * new branding
@@ -595,6 +598,14 @@ Successfully tested with WordPress 4.0
 * The plugin was released.
 
 == Upgrade Notice ==
+
+= 7.1.0 =
+New feature for post order and sorting.
+Moving languages to GlotPress.
+Compatibility with WordPress 5.8
+
+= 7.0.3 =
+Added new branding
 
 = 7.0.2 =
 Tested successfully with WordPress 5.6.2
