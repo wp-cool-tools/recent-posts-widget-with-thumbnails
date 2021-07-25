@@ -132,41 +132,18 @@ The plugin considers the output of actions hooked on:
 
 To design the list and its items you can use these CSS selectors:
 
-`.rpwwt-widget`
-: the element which contains the post list
-
-`.rpwwt-widget ul`
-: the list which contains the list items
-
-`.rpwwt-widget ul li`
-: the list item in the list
-
-`.rpwwt-widget ul li.rpwwt-sticky`
-: the list item of a sticky post
-
-`.rpwwt-widget ul li a`
-: link in the list
-
-`.rpwwt-widget ul li a img`
-: linked image
-
-`.rpwwt-widget ul li a span.rpwwt-post-title`
-: the post title
-
-`.rpwwt-widget ul li div.rpwwt-post-author`
-: the post author
-
-`.rpwwt-widget ul li div.rpwwt-post-categories`
-: the post category list
-
-`.rpwwt-widget ul li div.rpwwt-post-date`
-: the post date
-
-`.rpwwt-widget ul li div.rpwwt-post-excerpt`
-: the post excerpt
-
-`.rpwwt-widget ul li div.rpwwt-post-comments-number`
-: the number of comments
+`.rpwwt-widget`: the element which contains the post list
+`.rpwwt-widget ul`: the list which contains the list items
+`.rpwwt-widget ul li`: the list item in the list
+`.rpwwt-widget ul li.rpwwt-sticky`: the list item of a sticky post
+`.rpwwt-widget ul li a`: link in the list
+`.rpwwt-widget ul li a img`: linked image
+`.rpwwt-widget ul li a span.rpwwt-post-title`: the post title
+`.rpwwt-widget ul li div.rpwwt-post-author`: the post author
+`.rpwwt-widget ul li div.rpwwt-post-categories`: the post category list
+`.rpwwt-widget ul li div.rpwwt-post-date`: the post date
+`.rpwwt-widget ul li div.rpwwt-post-excerpt`: the post excerpt
+`.rpwwt-widget ul li div.rpwwt-post-comments-number`: the number of comments
 
 = Languages =
 
