@@ -191,3 +191,5 @@ printf(
 <em><?php esc_html_e( 'If activated this option applies to all instances of this widget.', 'recent-posts-widget-with-thumbnails' ); ?></em></p>
 
 <p><?php esc_html_e( 'Do you like the plugin?', 'recent-posts-widget-with-thumbnails' ); ?> <a href="https://wordpress.org/support/plugin/recent-posts-widget-with-thumbnails/reviews/" target="_blank"><?php esc_html_e( 'Please rate it at wordpress.org!', 'recent-posts-widget-with-thumbnails' ); ?></a></p>
+
+<p><strong><?php esc_html_e( 'Are you looking for more options?', 'recent-posts-widget-with-thumbnails' ); ?></strong> <a href="https://www.kybernetik-services.com/plugins/ultimate-post-list-pro/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=recent-posts-widget-with-thumbnails&utm_content=widget-form" target="_blank"><?php esc_html_e( 'Check out Ultimate Post List Pro!', 'recent-posts-widget-with-thumbnails' ); ?></a></p>
