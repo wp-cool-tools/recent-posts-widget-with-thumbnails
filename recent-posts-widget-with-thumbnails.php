@@ -981,9 +981,9 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		if ( $excerpt ) {
 			// append 'more' text, set 'more' signs as link if desired
 			if ( $this->customs[ 'set_more_as_link' ] ) {
-				$excerpt .= sprintf( '<a href="%s"%s>%s</a>', get_the_permalink( $post ), $this->customs[ 'link_target' ], $this->customs[ 'excerpt_more' ] );
+				$excerpt .= sprintf( '<a href="%s"%s class="rpwwt-post-excerpt-more">%s</a>', get_the_permalink( $post ), $this->customs[ 'link_target' ], $this->customs[ 'excerpt_more' ] );
 			} else {
-				$excerpt .= $this->customs[ 'excerpt_more' ];
+				$excerpt .= '<span class="rpwwt-post-excerpt-more">' . $this->customs[ 'excerpt_more' ] . '</span>';
 			}
 		}
 		

@@ -143,6 +143,7 @@ To design the list and its items you can use these CSS selectors:
 `.rpwwt-widget ul li div.rpwwt-post-categories`: the post category list
 `.rpwwt-widget ul li div.rpwwt-post-date`: the post date
 `.rpwwt-widget ul li div.rpwwt-post-excerpt`: the post excerpt
+`.rpwwt-widget ul li div.rpwwt-post-excerpt .rpwwt-post-excerpt-more`: the "more" text following the excerpt.
 `.rpwwt-widget ul li div.rpwwt-post-comments-number`: the number of comments
 
 = Languages =
@@ -228,7 +229,8 @@ If you want to contribute a translation of the plugin in your language it would 
 
 = 7.1.0 =
 * Added feature for post order and sorting (feature request: https://wordpress.org/support/topic/sort-posts-by-title/)
-* moved language files to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/recent-posts-widget-with-thumbnails/). So, please contribute as a translator to make Recent Posts Widget With Thumbnails available in more and more languages.
+* Added class `.rpwwt-post-excerpt-more` for the "more" text following the excerpt. (feature request: https://wordpress.org/support/topic/class-for-more-sign/)
+* Moved language files to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/recent-posts-widget-with-thumbnails/). So, please contribute as a translator to make Recent Posts Widget With Thumbnails available in more and more languages.
 * Compatibility with WordPress 5.8
 
 = 7.0.3 =
