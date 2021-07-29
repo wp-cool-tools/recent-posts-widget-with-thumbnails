@@ -5,7 +5,7 @@ Tags: images, posts list, recent posts, thumbnails, widget
 Requires at least: 2.9
 Requires PHP: 5.2
 Tested up to: 5.8
-Stable tag: 7.1.0
+Stable tag: 7.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -227,9 +227,13 @@ If you want to contribute a translation of the plugin in your language it would 
 
 == Changelog ==
 
+= 7.1.1 =
+* Restored PHP 5.x support
+
 = 7.1.0 =
 * Added feature for post order and sorting (feature request: https://wordpress.org/support/topic/sort-posts-by-title/)
 * Added class `.rpwwt-post-excerpt-more` for the "more" text following the excerpt. (feature request: https://wordpress.org/support/topic/class-for-more-sign/)
+* Dropped PHP 5 support
 * Moved language files to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/recent-posts-widget-with-thumbnails/). So, please contribute as a translator to make Recent Posts Widget With Thumbnails available in more and more languages.
 * Compatibility with WordPress 5.8
 
@@ -577,6 +581,9 @@ Successfully tested with WordPress 4.0
 * The plugin was released.
 
 == Upgrade Notice ==
+
+= 7.1.1 =
+This version needs at least PHP 7 or above.
 
 = 7.1.0 =
 New feature for post order and sorting.
