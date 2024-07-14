@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: images, posts list, recent posts, thumbnails, widget
 Requires at least: 2.9
 Requires PHP: 5.2
-Tested up to: 6.5
+Tested up to: 6.6
 Stable tag: 7.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -21,14 +21,16 @@ The plugin does not collect any personal data, so it is **ready for EU General D
 
 = Lightweight, simple and effective =
 
-No huge widget with hundreds of options. This plugin is based on the well-known WordPress default widget 'Recent Posts' and extended to display more informations about the posts like e.g. thumbnails, excerpts and assigned categories. And it provides more options to build custom-taylored posts lists.
+No huge widget with hundreds of options. This plugin is based on the well-known WordPress default widget 'Recent Posts' and extended to display more information about the posts like e.g. thumbnails, excerpts and assigned categories. And it provides more options to build custom-taylored posts lists.
 
 The thumbnails will be built from the featured image of a post or of the first image in the post content. If there is neither a featured image nor a content image then you can define a default thumbnail.
 
-You can set the width and heigth of the thumbnails in the list. The thumbnails appear left-aligned to the post titles in left-to-right languages. In right-to-left languages they appear right-aligned.
+You can set the width and height of the thumbnails in the list. The thumbnails appear left-aligned to the post titles in left-to-right languages. In right-to-left languages they appear right-aligned.
 
 = What users wrote =
 
+* **"I just want to say thank you for developing such a good plugin."** in the [reviews](https://wordpress.org/support/topic/thanks-for-developing-such-a-great-plugin-4/) by modelaid on July 3, 2024
+* **"Excellent plugin!"** in the [reviews](https://wordpress.org/support/topic/excellent-plugin-8567/) by mystnick on April 18, 2023
 * **"... one of the dynamic and smart, yet admin and user optimized widget plugins ..."** in [How to Add Widgets and Start Using Them in WordPress Website?](https://www.sktthemes.org/wordpress-plugins/add-widgets-wordpress-website/) by SKT Posts Themes on September 3, 2020
 * **"بهترین افزونه های نمایش آخرین نوشته ها در وردپرس"** in [ابزارک آخرین نوشته وردپرس](https://modirwp.com/%D8%A7%D9%81%D8%B2%D9%88%D9%86%D9%87-recent-posts-widget-with-thumbnails/) by Ghodsi on December 16, 2019
 * **"Another good all around widget, suitable for most projects"** in [Free WordPress recent posts widget – Which one is the best?](https://howto-wordpress-tips.com/free-wordpress-recent-posts-widget/) on December 3, 2019
@@ -57,7 +59,7 @@ Some users published video tutorials on YouTube:
 2. Number of listed posts
 3. Open post links in new windows
 4. Different options for post order and sorting
-5. Hide current post in list
+5. Hide the current post in list
 6. Show only sticky posts
 7. Hide sticky posts
 8. Keep sticky posts on top of the list if not hidden
@@ -67,7 +69,7 @@ Some users published video tutorials on YouTube:
 12. Label for the author names
 13. Show post categories
 14. Show post category names as links to their archives
-15. Label for the categories
+15. Label for categories
 16. Show post date
 17. Show post excerpt
 18. Show number of comments
@@ -80,11 +82,11 @@ Some users published video tutorials on YouTube:
 25. Registered thumbnail dimensions
 26. Thumbnail width in px
 27. Thumbnail height in px
-28. Keep aspect ratio of thumbnails
+28. Keep the aspect ratio of thumbnails
 29. Try to take the first post image as thumbnail
 30. Only use the first post image as thumbnail
 31. Use default thumbnail if no thumbnail is available
-32. Always use the default thumbnail
+32. Always use default thumbnail
 33. Default thumbnail URL
 34. Alternative text of the default thumbnail
 35. Omit all alternative texts of the thumbnails for a better accessibility
@@ -106,7 +108,7 @@ The plugin considers the output of actions hooked on:
 		3. the widget base ID as a string
 	* **expected return value:** a string
 3. `rpwwt_excerpt_length`
-	* **passed argument:** the maximum number of characters of the post excerpt as an integer
+	* **passed argument:** the maximum number of characters for the post excerpt as an integer
 	* **expected return value:** an integer
 4. `rpwwt_excerpt_more`
 	* **passed argument:** the string to append after the post excerpt
@@ -117,20 +119,20 @@ The plugin considers the output of actions hooked on:
 		2. the post object
 	* **expected return value:** a string
 6. `the_excerpt`
-	* **passed argument:** the post escerpt as a string
+	* **passed argument:** the post excerpt as a string
 	* **expected return value:** a string
 7. `rpwwt_categories`
 	* **passed argument:** the category list of each post as a string
 	* **expected return value:** a string
 8. `rpwwt_list_cats`
-	* **passed arguments:** 
+	* **passed arguments:**
 		1. the category name as a string
 		2. the category as an array
 	* **expected return value:** a string
 
 = Useful hints for developers: Available CSS Selectors =
 
-To design the list and its items you can use these CSS selectors:
+To design the list and its items, you can use these CSS selectors:
 
 `.rpwwt-widget`: the element which contains the post list
 `.rpwwt-widget ul`: the list which contains the list items
@@ -151,8 +153,8 @@ To design the list and its items you can use these CSS selectors:
 The user interface is available in several languages.
 
 Starting from version 7.1.0 the handling for translations are moved to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/recent-posts-widget-with-thumbnails/).
-Please help to translate into more languages or you can re-work on the current translations, if you think it's needed.
-If you have done your translation please leave a comment in the [plugin's support forum](https://wordpress.org/support/plugin/recent-posts-widget-with-thumbnails). I'll take care of the review and approval.
+Please help to translate into more languages, or you can re-work on the current translations if you think it's needed.
+If you have done your translation, please leave a comment in the [plugin's support forum](https://wordpress.org/support/plugin/recent-posts-widget-with-thumbnails). I'll take care of the review and approval.
 
 == Installation ==
 
@@ -643,7 +645,7 @@ Added options to show only sticky posts and to print inline CSS, tested with Wor
 Fixed missing sticky posts in category filtered lists, tested with WordPress 4.9.7
 
 = 6.2 =
-Added option for category names as links, added subheadlines in the widget, tested with WordPress 4.9.5
+Added option for category names as links, added sub-headlines in the widget, tested with WordPress 4.9.5
 
 = 6.1 =
 Added filter hook 'rpwwt_the_excerpt', removed widget title sanitation, tested with WordPress 4.9.4
@@ -670,7 +672,7 @@ Added japanese translation, tested with WordPress 4.8.2
 Added turkish translation, added Requires PHP info in readme.txt, tested with WordPress 4.8.1
 
 = 5.1 =
-Revised sanitations and translations, tested with WordPress 4.8
+Revised sanitation and translations, tested with WordPress 4.8
 
 = 5.0 =
 Revised code
