@@ -1,10 +1,10 @@
 === Recent Posts Widget With Thumbnails ===
-Contributors: kybernetikservices,Hinjiriyo
+Contributors: kybernetikservices,wpcooltools,Hinjiriyo
 Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: images, posts list, recent posts, thumbnails, widget
 Requires at least: 2.9
 Requires PHP: 5.2
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: 7.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -29,6 +29,7 @@ You can set the width and height of the thumbnails in the list. The thumbnails a
 
 = What users wrote =
 
+* **"This plugin performs a simple task but one that I find to be invaluable."** [reviews](https://wordpress.org/support/topic/simple-but-invaluable-plugin/) by funkster on July 1, 2025
 * **"I just want to say thank you for developing such a good plugin."** in the [reviews](https://wordpress.org/support/topic/thanks-for-developing-such-a-great-plugin-4/) by modelaid on July 3, 2024
 * **"Excellent plugin!"** in the [reviews](https://wordpress.org/support/topic/excellent-plugin-8567/) by mystnick on April 18, 2023
 * **"... one of the dynamic and smart, yet admin and user optimized widget plugins ..."** in [How to Add Widgets and Start Using Them in WordPress Website?](https://www.sktthemes.org/wordpress-plugins/add-widgets-wordpress-website/) by SKT Posts Themes on September 3, 2020
