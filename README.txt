@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: images, posts list, recent posts, thumbnails, widget
 Requires at least: 2.9
 Requires PHP: 5.2
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: 7.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -26,6 +26,14 @@ No huge widget with hundreds of options. This plugin is based on the well-known 
 The thumbnails will be built from the featured image of a post or of the first image in the post content. If there is neither a featured image nor a content image then you can define a default thumbnail.
 
 You can set the width and height of the thumbnails in the list. The thumbnails appear left-aligned to the post titles in left-to-right languages. In right-to-left languages they appear right-aligned.
+
+= Custom Post Type =
+
+If you want to list custom post types with the featured image, please check out our plugin [Ultimate Post List Pro](https://www.kybernetik-services.com/shop/wordpress/plugin/ultimate-post-list-pro/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=recent-post-widgets-with-thumbnail&utm_content=readme).
+
+= Demo =
+
+You want to test Recent Posts Widget With Thumbnails before installing on your site? Try it out on your individual and free playground site and [click here](https://playground.wordpress.net/?theme=twentytwentyone&plugin=recent-posts-widget-with-thumbnails).
 
 = What users wrote =
 
