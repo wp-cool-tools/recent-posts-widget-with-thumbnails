@@ -1,7 +1,7 @@
 === Recent Posts Widget With Thumbnails ===
 Contributors: kybernetikservices,wpcooltools,Hinjiriyo
 Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
-Tags: images, posts list, recent posts, thumbnails, widget
+Tags: recent posts, widget, thumbnails, featured image, sidebar
 Requires at least: 2.9
 Requires PHP: 5.2
 Tested up to: 7.0
