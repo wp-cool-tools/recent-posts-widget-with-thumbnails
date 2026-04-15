@@ -228,7 +228,7 @@ If there is no text in the "Excerpt" box the plugin tries to build an excerpt vi
 
 = Where is the *.pot file for translating the plugin in any language? =
 
-There is not pot file coming anymore with the plugin. With version 7.1 the translation was moved to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/recent-posts-widget-with-thumbnails/).
+There is no pot file coming anymore with the plugin. With version 7.1 the translation was moved to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/recent-posts-widget-with-thumbnails/).
 If you want to contribute a translation of the plugin in your language it would be great!
 
 == Screenshots ==
