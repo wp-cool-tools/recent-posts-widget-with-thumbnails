@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: recent posts, widget, thumbnails, featured image, sidebar
 Requires at least: 2.9
 Requires PHP: 5.2
-Tested up to: 7.0
+Tested up to: 7.1
 Stable tag: 7.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
