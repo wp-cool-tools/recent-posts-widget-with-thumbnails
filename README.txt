@@ -241,6 +241,7 @@ If you want to contribute a translation of the plugin in your language it would 
 * Added direct file access prevention
 * Avoided ambiguous WordPress global naming
 * Completed translation domains and literal strings
+* Removed persistent review solicitation
 * Corrected the SQL placeholder usage for attachment lookups
 * Hardened escaping for widget settings and frontend output
 * Replaced direct CSS file operations with the WordPress Filesystem API
