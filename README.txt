@@ -243,11 +243,11 @@ If you want to contribute a translation of the plugin in your language it would 
 * Added direct file access prevention
 * Avoided ambiguous WordPress global naming
 * Completed translation domains and literal strings
-* Removed persistent review solicitation
 * Added context for translators
 * Used WordPress-native utility functions
 * Enforced strict array comparisons
-* Remove deprecated wp_get_sites usage
+* Improved accessibility for screen reader
+* Removed deprecated wp_get_sites usage
 * Raised minimum WordPress version to 4.6
 * Raised minimum PHP version to 5.6
 * Corrected the SQL placeholder usage for attachment lookups
