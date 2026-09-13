@@ -91,7 +91,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		$this->defaults[ 'thumb_width' ]		= absint( round( get_option( 'thumbnail_size_w', 110 ) / 2 ) ); // custom width of the thumbnail
 		$this->defaults[ 'widget_title' ]		= ''; // title of the widget
 		// Domain name and protocol of WP site
-		$parsed_url = parse_url( home_url() );
+		$parsed_url = wp_parse_url( home_url() );
 		$this->defaults[ 'site_protocol' ]		= $parsed_url[ 'host' ];
 		$this->defaults[ 'site_url' ]			= $parsed_url[ 'scheme' ];
 		unset( $parsed_url );
@@ -327,9 +327,9 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 	function update( $new_widget_settings, $old_widget_settings ) {
 		$instance = $old_widget_settings;
 		// sanitize user input before update
-		$instance[ 'title' ] 			= ( isset( $new_widget_settings[ 'title' ] ) )            ? strip_tags( $new_widget_settings[ 'title' ] )				: $this->defaults[ 'widget_title' ];
+		$instance[ 'title' ] 			= ( isset( $new_widget_settings[ 'title' ] ) )            ? wp_strip_all_tags( $new_widget_settings[ 'title' ] )				: $this->defaults[ 'widget_title' ];
 		$instance[ 'default_url' ] 		= ( isset( $new_widget_settings[ 'default_url' ] ) )      ? esc_url_raw( $new_widget_settings[ 'default_url' ] )		: $this->defaults[ 'thumb_url' ];
-		$instance[ 'thumb_dimensions' ] = ( isset( $new_widget_settings[ 'thumb_dimensions' ] ) ) ? strip_tags( $new_widget_settings[ 'thumb_dimensions' ] )	: $this->defaults[ 'thumb_dimensions' ];
+		$instance[ 'thumb_dimensions' ] = ( isset( $new_widget_settings[ 'thumb_dimensions' ] ) ) ? wp_strip_all_tags( $new_widget_settings[ 'thumb_dimensions' ] )	: $this->defaults[ 'thumb_dimensions' ];
 		$instance[ 'category_ids' ]   	= ( isset( $new_widget_settings[ 'category_ids' ] ) )     ? array_map( 'absint', $new_widget_settings[ 'category_ids' ] ) : $this->defaults[ 'category_ids' ];
         $instance[ 'orderby' ]         	= ( isset( $new_widget_settings[ 'orderby' ] ) )          ? $new_widget_settings[ 'orderby' ]		                    : $this->defaults[ 'orderby' ];
         $instance[ 'order' ]   	        = ( isset( $new_widget_settings[ 'order' ] ) )            ? $new_widget_settings[ 'order' ]		                        : $this->defaults[ 'order' ];
@@ -1089,7 +1089,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 	 */
 	private function get_aria_nav_label( $title ) {
 		// the title may be filtered: Strip out HTML
-		$title = trim( strip_tags( $title ) );
+		$title = trim( wp_strip_all_tags( $title ) );
 		// and make sure the aria-label is never empty
 		return $title ? $title : $this->defaults[ 'nav_label' ];
 	}
