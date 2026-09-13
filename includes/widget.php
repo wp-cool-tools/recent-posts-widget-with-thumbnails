@@ -1,11 +1,11 @@
 <?php
 if (!defined('ABSPATH')) exit;
 
-echo $args[ 'before_widget' ] . "\n";
+echo wp_kses_post( $args[ 'before_widget' ] ) . "\n";
 ?>
-<div id="rpwwt-<?php echo $args[ 'widget_id' ];?>" class="rpwwt-widget">
+<div id="rpwwt-<?php echo esc_attr( $args[ 'widget_id' ] );?>" class="rpwwt-widget">
 <?php 
-	if ( $title ) echo $args[ 'before_title' ] . $title . $args[ 'after_title' ] . "\n";
+	if ( $title ) echo wp_kses_post( $args[ 'before_title' ] . $title . $args[ 'after_title' ] ) . "\n";
 	if ( $this->defaults[ 'is_nav_widget' ] ) { ?>
 	<nav role="navigation" aria-label="<?php echo esc_attr( $this->get_aria_nav_label( $title ) ); ?>">
 <?php } ?>
@@ -25,10 +25,10 @@ echo $args[ 'before_widget' ] . "\n";
 			}
 		}
 		if ( $classes ) {
-			echo ' class="', join( ' ', $classes ), '"';
+			echo ' class="', esc_attr( join( ' ', $classes ) ), '"';
 		}
 		$aria_current = $queried_object_id === $r->post->ID ? ' aria-current="page"' : '';
-		?>><a href="<?php the_permalink(); ?>"<?php echo $this->customs[ 'link_target' ]; echo $aria_current; ?>><?php 
+		?>><a href="<?php echo esc_url( get_permalink() ); ?>"<?php echo wp_kses_data( $this->customs[ 'link_target' ] ); echo wp_kses_data( $aria_current ); ?>><?php
 		if ( $bools[ 'show_thumb' ] ) {
 			$thumb = '';
 			// if always only the default image
@@ -52,12 +52,12 @@ echo $args[ 'before_widget' ] . "\n";
 				} // if has_post_thumbnail
 			} // if only_1st_img
 			if ( $thumb ) {
-				echo $thumb;
+				echo wp_kses_post( $thumb );
 			// if there is no image 
 			} else {
 				// if user allows default image then
 				if ( $bools[ 'use_default' ] ) {
-					echo $default_img;
+					echo wp_kses_post( $default_img );
 				} // if use_default
 			} // if thumb
 		} // if show_thumb
@@ -66,13 +66,13 @@ echo $args[ 'before_widget' ] . "\n";
 			?><span class="rpwwt-post-title"><?php
 			$post_title = $this->get_the_trimmed_post_title();
 			if ( $post_title ) {
-				echo $post_title;
+				echo esc_html( $post_title );
 			} else {
 				printf(
 					'%s<span class="screen-reader-text"> %s %d</span>',
-					$this->defaults[ 'no_title' ],
-					$this->defaults[ 'Post' ],
-					get_the_ID() 
+					esc_html( $this->defaults[ 'no_title' ] ),
+					esc_html( $this->defaults[ 'Post' ] ),
+					absint( get_the_ID() )
 				);
 			}
 			?></span><?php
@@ -82,16 +82,16 @@ echo $args[ 'before_widget' ] . "\n";
 			?><div class="rpwwt-post-author"><?php echo esc_html( $this->get_the_author() ); ?></div><?php 
 		}
 		if ( $bools[ 'show_categories' ] ) {
-			?><div class="rpwwt-post-categories"><?php echo $this->get_the_categories( $r->post->ID ); ?></div><?php 
+			?><div class="rpwwt-post-categories"><?php echo wp_kses_post( $this->get_the_categories( $r->post->ID ) ); ?></div><?php
 		}
 		if ( $bools[ 'show_date' ] ) {
-			?><div class="rpwwt-post-date"><?php echo get_the_date(); ?></div><?php 
+			?><div class="rpwwt-post-date"><?php echo esc_html( get_the_date() ); ?></div><?php
 		}
 		if ( $bools[ 'show_excerpt' ] ) {
-			?><div class="rpwwt-post-excerpt"><?php echo $this->get_the_trimmed_excerpt(); ?></div><?php 
+			?><div class="rpwwt-post-excerpt"><?php echo wp_kses_post( $this->get_the_trimmed_excerpt() ); ?></div><?php
 		}
 		if ( $bools[ 'show_comments_number' ] ) {
-			?><div class="rpwwt-post-comments-number"><?php echo get_comments_number_text(); ?></div><?php 
+			?><div class="rpwwt-post-comments-number"><?php echo esc_html( get_comments_number_text() ); ?></div><?php
 		} 
 	?></li>
 <?php } // while() ?>
@@ -100,4 +100,4 @@ echo $args[ 'before_widget' ] . "\n";
 	</nav>
 <?php } ?>
 </div><!-- .rpwwt-widget -->
-<?php echo $args[ 'after_widget' ]; ?>
+<?php echo wp_kses_post( $args[ 'after_widget' ] ); ?>

@@ -240,6 +240,7 @@ If you want to contribute a translation of the plugin in your language it would 
 = 7.2.0 =
 * Added direct file access prevention
 * Corrected the SQL placeholder usage for attachment lookups
+* Hardened escaping for widget settings and frontend output
 
 = 7.1.1 =
 * Restored PHP 5.x support
