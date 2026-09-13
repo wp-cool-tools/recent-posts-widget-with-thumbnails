@@ -242,6 +242,7 @@ If you want to contribute a translation of the plugin in your language it would 
 * Corrected the SQL placeholder usage for attachment lookups
 * Hardened escaping for widget settings and frontend output
 * Replaced direct CSS file operations with the WordPress Filesystem API
+* Replaced the direct attachment database query with the WordPress media API
 
 = 7.1.1 =
 * Restored PHP 5.x support

@@ -29,7 +29,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 	var $use_no_css;	// class wide setting, bool type
 
     // Create the widget options and such here, then call
-    // $this->WP_Widget to let wordpress know about it.
+    // $this->WP_Widget to let WordPress know about it.
     function __construct() {
 
 		$language_codes = explode( '_', get_locale() );
@@ -722,7 +722,6 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 	 */
 	private function get_first_content_image_id () {
 		// set variables
-		global $wpdb;
 		$post = get_post();
 		if ( $post and isset( $post->post_content ) ) {
 			// look for images in HTML code
@@ -759,8 +758,8 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 						} elseif ( 0 === strpos( $url, '/' ) ) {
 							$url = $this->defaults[ 'site_url' ] . $url;
 						}
-						// look up its id in the db
-						$thumb_id = $wpdb->get_var( $wpdb->prepare( "SELECT `ID` FROM $wpdb->posts WHERE `guid` = %s", $url ) );
+						// Resolve the attachment through the WordPress media API.
+						$thumb_id = attachment_url_to_postid( $url );
 						// if id is available: return it
 						if ( $thumb_id ) {
 							return absint( $thumb_id );
