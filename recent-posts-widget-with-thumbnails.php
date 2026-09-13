@@ -5,7 +5,7 @@
  * Description:       Small and fast plugin to display in the sidebar a list of linked titles and thumbnails of the most recent postings
  * Version:           7.2.0
  * Requires at least: 4.6
- * Requires PHP:      5.2
+ * Requires PHP:      5.6
  * Author:            Kybernetik Services
  * Author URI:        https://www.kybernetik-services.com/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=recent-posts-widget-with-thumbnails&utm_content=author
  * Text Domain:       recent-posts-widget-with-thumbnails
