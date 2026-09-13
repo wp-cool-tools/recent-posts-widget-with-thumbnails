@@ -740,7 +740,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 							$url = $this->defaults[ 'site_url' ] . $url;
 						}
 						// look up its id in the db
-						$thumb_id = $wpdb->get_var( $wpdb->prepare( "SELECT `ID` FROM $wpdb->posts WHERE `guid` = '%s'", $url ) );
+						$thumb_id = $wpdb->get_var( $wpdb->prepare( "SELECT `ID` FROM $wpdb->posts WHERE `guid` = %s", $url ) );
 						// if id is available: return it
 						if ( $thumb_id ) {
 							return absint( $thumb_id );
