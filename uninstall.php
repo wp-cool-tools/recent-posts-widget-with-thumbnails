@@ -48,16 +48,9 @@ if ( is_multisite() ) {
 
 	// get registered site IDs
 	$site_ids = array();
-	if ( version_compare( get_bloginfo( 'version' ), '4.6', '>=' ) ) {
-		$sites = get_sites();
-		foreach ( $sites as $site ) {
-			$site_ids[] = $site->id;
-		}
-	} else {
-		$sites = wp_get_sites();
-		foreach ( $sites as $site ) {
-			$site_ids[] = $site[ 'blog_id' ];
-		}
+	$sites = get_sites();
+	foreach ( $sites as $site ) {
+		$site_ids[] = $site->id;
 	}
 
 	if ( empty ( $site_ids ) ) return;

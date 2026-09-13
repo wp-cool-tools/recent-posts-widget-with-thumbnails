@@ -2,7 +2,7 @@
 Contributors: kybernetikservices,wpcooltools,Hinjiriyo
 Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: recent posts, widget, thumbnails, featured image, sidebar
-Requires at least: 2.9
+Requires at least: 4.6
 Requires PHP: 5.2
 Tested up to: 7.1
 Stable tag: 7.2.0
@@ -196,7 +196,7 @@ If you have done your translation, please leave a comment in the [plugin's suppo
 
 = What are the requirements for this plugin? =
 
-The WordPress version should be at least 2.9 to use featured images.
+The WordPress version must be at least 4.6.
 
 The theme should support `wp_head()` in the HTML header section to print the CSS code for a beautiful alignment of the thumbnails.
 
@@ -245,6 +245,7 @@ If you want to contribute a translation of the plugin in your language it would 
 * Added context for translators
 * Used WordPress-native utility functions
 * Enforced strict array comparisons
+* Raised minimum WordPress version to 4.6
 * Corrected the SQL placeholder usage for attachment lookups
 * Hardened escaping for widget settings and frontend output
 * Replaced direct CSS file operations with the WordPress Filesystem API
