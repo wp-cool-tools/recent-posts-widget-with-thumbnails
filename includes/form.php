@@ -111,6 +111,7 @@
 
 <p><label for="<?php echo esc_attr( $field_ids[ 'category_ids' ] ); ?>"><?php esc_html_e( 'Show posts of selected categories only?', 'recent-posts-widget-with-thumbnails' ); ?></label><br />
 <?php echo wp_kses( $selection_element, array( 'select' => array( 'name' => true, 'id' => true, 'class' => true, 'multiple' => true, 'size' => true ), 'option' => array( 'value' => true, 'selected' => true ) ) ); ?><br />
+<?php /* translators: %s: Label for the option that includes all categories. */ ?>
 <em><?php printf( esc_html__( 'Click on the categories with pressed CTRL key to select multiple categories. If &#8220;%s&#8221; was selected then other selections will be ignored.', 'recent-posts-widget-with-thumbnails' ), esc_html( $label_all_cats ) ); ?></em></p>
 
 <h4><?php esc_html_e( 'Thumbnail Settings', 'recent-posts-widget-with-thumbnails' ); ?></h4>
@@ -131,6 +132,7 @@ foreach ( $size_options as $option ) {
 } // end foreach(option)
 ?>
 	</select><br />
+	<?php /* translators: %s: Link to the WordPress Media Settings screen. */ ?>
 	<em><?php printf( wp_kses_post( __( 'If you use a specified size the following sizes will be taken, otherwise they will be ignored and the selected dimension as stored in %s will be used:', 'recent-posts-widget-with-thumbnails' ) ), wp_kses_post( $media_trail ) ); ?></em>
 </p>
 
@@ -163,6 +165,7 @@ foreach ( $size_options as $option ) {
 <input class="widefat" id="<?php echo esc_attr( $field_ids[ 'thumb_alt' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'thumb_alt' ) ); ?>" type="text" value="<?php echo esc_attr( $optional_texts[ 'thumb_alt' ] ); ?>" placeholder="<?php echo esc_attr( $this->defaults[ 'thumb_alt' ] ); ?>" /><br />
 <em><?php 
 echo wp_kses_post( sprintf(
+	/* translators: 1: Accessibility guidance URL, 2: Link attributes, 3: Screen-reader text. */
 	__( '<a href="%1$s" %2$s>Describe the purpose of the image%3$s</a>. Leave empty if the image is purely decorative.', 'recent-posts-widget-with-thumbnails' ),
 	esc_url( 'https://www.w3.org/WAI/tutorials/images/decision-tree' ),
 	'target="_blank" rel="noopener noreferrer"',
