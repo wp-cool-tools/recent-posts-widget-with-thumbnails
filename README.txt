@@ -245,6 +245,7 @@ If you want to contribute a translation of the plugin in your language it would 
 * Added context for translators
 * Used WordPress-native utility functions
 * Enforced strict array comparisons
+* Remove deprecated wp_get_sites usage
 * Raised minimum WordPress version to 4.6
 * Corrected the SQL placeholder usage for attachment lookups
 * Hardened escaping for widget settings and frontend output
