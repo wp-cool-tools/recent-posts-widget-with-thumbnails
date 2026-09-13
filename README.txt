@@ -6,7 +6,7 @@ Requires at least: 2.9
 Requires PHP: 5.2
 Tested up to: 7.1
 Stable tag: 7.2.0
-License: GPLv2 or later
+License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 List the most recent posts with post titles, thumbnails, excerpts, authors, categories, dates and more!
@@ -239,6 +239,7 @@ If you want to contribute a translation of the plugin in your language it would 
 == Changelog ==
 = 7.2.0 =
 * Added direct file access prevention
+* Avoided ambiguous WordPress global naming
 * Corrected the SQL placeholder usage for attachment lookups
 * Hardened escaping for widget settings and frontend output
 * Replaced direct CSS file operations with the WordPress Filesystem API

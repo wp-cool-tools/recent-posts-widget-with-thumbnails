@@ -19,8 +19,8 @@ echo wp_kses_post( $args[ 'before_widget' ] ) . "\n";
 		if ( $bools[ 'print_post_categories' ] ) {
 			$cats = get_the_category();
 			if ( is_array( $cats ) and $cats ) {
-				foreach ( $cats as $cat ) {
-					$classes[] = $cat->slug;
+				foreach ( $cats as $category ) {
+					$classes[] = $category->slug;
 				}
 			}
 		}
