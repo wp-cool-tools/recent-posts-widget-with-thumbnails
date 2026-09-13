@@ -149,7 +149,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		$this->use_inline_css = $bools[ 'use_inline_css' ];
 		$this->use_no_css = $bools[ 'use_no_css' ];
 		// if 'all categories' was selected ignore other selections of categories
-		if ( in_array( 0, $category_ids ) ) {
+		if ( in_array( 0, $category_ids, true ) ) {
 			$category_ids = $this->defaults[ 'category_ids' ];
 		}
 		// if no URL take default URL
@@ -180,7 +180,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		//$query_args[ 'orderby' ] = ( $bools[ 'random_order' ] ) ? 'rand' : 'menu_order, post_date';
 
 		// add categories param only if 'all categories' was not selected
-		if ( ! in_array( 0, $category_ids ) ) {
+		if ( ! in_array( 0, $category_ids, true ) ) {
 			$query_args[ 'category__in' ] = $category_ids;
 		}
 		
@@ -359,7 +359,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		}
 
 		// if 'all categories' was selected ignore other selections of categories
-		if ( in_array( 0, $instance[ 'category_ids' ] ) ) {
+		if ( in_array( 0, $instance[ 'category_ids' ], true ) ) {
 			$instance[ 'category_ids' ] = $this->defaults[ 'category_ids' ];
 		}
 		
@@ -441,7 +441,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		}
 
 		// if 'all categories' was selected ignore other selections of categories
-		if ( in_array( 0, $category_ids ) ) {
+		if ( in_array( 0, $category_ids, true ) ) {
 			$category_ids = $this->defaults[ 'category_ids' ];
 		}
 		// if no URL take default URL
@@ -484,7 +484,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 			// Set technical name
 			$option_values[ 'size_name' ] = $size_name;
 			// Set name
-			$option_values[ 'name' ] = in_array( $size_name, $wp_standard_image_size_names ) ? $wp_standard_image_size_labels[$size_name] : $size_name;
+			$option_values[ 'name' ] = in_array( $size_name, $wp_standard_image_size_names, true ) ? $wp_standard_image_size_labels[$size_name] : $size_name;
 			// Set width
             $option_values[ 'width' ] = isset( $_wp_additional_image_sizes[$size_name]['width'] ) ? $_wp_additional_image_sizes[$size_name]['width'] : get_option( "{$size_name}_size_w" );
             // Set height
@@ -593,7 +593,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 			} // while( categories )
 
 			// make HTML of selection box
-			$selected = ( in_array( 0, $category_ids ) ) ? ' selected="selected"' : '';
+			$selected = ( in_array( 0, $category_ids, true ) ) ? ' selected="selected"' : '';
 			$selection_element .= "\t";
 			$selection_element .= '<option value="0"' . $selected . '>' . $label_all_cats . '</option>';
 			$selection_element .= "\n";
@@ -603,7 +603,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 				$pad = ( 0 < $category[ 'depth' ] ) ? str_repeat('&ndash;&nbsp;', $category[ 'depth' ] ) : '';
 				$selection_element .= "\t";
 				$selection_element .= '<option value="' . $category[ 'id' ] . '"';
-				$selection_element .= ( in_array( $category[ 'id' ], $category_ids ) ) ? ' selected="selected"' : '';
+				$selection_element .= ( in_array( $category[ 'id' ], $category_ids, true ) ) ? ' selected="selected"' : '';
 				$selection_element .= '>' . $pad . $cat_name . '</option>';
 				$selection_element .= "\n";
 			}
@@ -1031,9 +1031,9 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		$width  = 0;
 		$height = 0;
 		// check if selected size is in registered images sizes
-		if ( in_array( $size, get_intermediate_image_sizes() ) ) {
+		if ( in_array( $size, get_intermediate_image_sizes(), true ) ) {
 			// if in WordPress standard image sizes
-			if ( in_array( $size, array( 'thumbnail', 'medium', 'large' ) ) ) {
+			if ( in_array( $size, array( 'thumbnail', 'medium', 'large' ), true ) ) {
 				$width  = get_option( $size . '_size_w' );
 				$height = get_option( $size . '_size_h' );
 			} else {
@@ -1058,14 +1058,14 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 	 */
 	public function get_stickies_on_top( $posts ) {
 		// get sticky post IDs
-		$sticky_posts = get_option( 'sticky_posts' );
+		$sticky_posts = array_map( 'absint', (array) get_option( 'sticky_posts' ) );
 		// initialize variables for the correct number of posts in the result list
 		$num_posts = count( $posts );
 		$sticky_offset = 0;
 		// loop over posts and relocate stickies to the front
 		for( $i = 0; $i < $num_posts; $i++ ) {
 			// if sticky post
-			if ( in_array( $posts[ $i ]->ID, $sticky_posts ) ) {
+			if ( in_array( $posts[ $i ]->ID, $sticky_posts, true ) ) {
 				$sticky_post = $posts[ $i ];
 				// remove sticky post from current position
 				array_splice( $posts, $i, 1 );
