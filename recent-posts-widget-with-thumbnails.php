@@ -375,10 +375,10 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 			delete_option( $this->defaults[ 'plugin_slug' ] );
 		}
 
-		// delete current css file to let make new one via $this->enqueue_public_style()
-		if ( file_exists( $this->defaults[ 'css_file_path' ] ) ) {
-			// remove the file
-			unlink( $this->defaults[ 'css_file_path' ] );
+		// Delete the current CSS file so enqueue_public_style() can rebuild it.
+		$wp_filesystem = $this->get_wp_filesystem();
+		if ( $wp_filesystem && $wp_filesystem->exists( $this->defaults[ 'css_file_path' ] ) ) {
+			$wp_filesystem->delete( $this->defaults[ 'css_file_path' ] );
 		}
 
         // return sanitized current widget settings
@@ -387,6 +387,27 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 
 	function flush_widget_cache() {
 		wp_cache_delete( $this->defaults[ 'plugin_slug' ], 'widget' );
+	}
+
+	/**
+	 * Initialize and return the WordPress filesystem abstraction.
+	 *
+	 * @since 7.2.0
+	 *
+	 * @return WP_Filesystem_Base|false Filesystem instance on success, false otherwise.
+	 */
+	private function get_wp_filesystem() {
+		global $wp_filesystem;
+
+		if ( ! function_exists( 'WP_Filesystem' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/file.php';
+		}
+
+		if ( ! WP_Filesystem() ) {
+			return false;
+		}
+
+		return $wp_filesystem;
 	}
 
     // Saves the  data, called via AJAX. But the saving logic comes here.
@@ -629,8 +650,9 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		
 		$is_file = false;
 		$css_code = '';
+		$wp_filesystem = $this->get_wp_filesystem();
 		// make sure the CSS file exists; if not available: generate it
-		if ( file_exists( $this->defaults[ 'css_file_path' ] ) ) {
+		if ( $wp_filesystem && $wp_filesystem->exists( $this->defaults[ 'css_file_path' ] ) ) {
 			$is_file = true;
 		} else {
 			// get stored settings
@@ -646,10 +668,8 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 			list( $css_code, $use_inline_css ) = $this->generate_css_code( $all_settings );
 			// if not to print the CSS as inline code in the HTML document
 			if ( ! $use_inline_css ) {
-				// write file safely
-				if ( @file_put_contents( $this->defaults[ 'css_file_path' ], $css_code ) ) {
-					// file writing was successfull, so change file permissions
-					chmod( $this->defaults[ 'css_file_path' ], 0644 );
+				// Write the stylesheet through the WordPress filesystem abstraction.
+				if ( $wp_filesystem && $wp_filesystem->put_contents( $this->defaults[ 'css_file_path' ], $css_code, FS_CHMOD_FILE ) ) {
 					$is_file = true;
 				} // if CSS file successfully created
 			} // if no inline CSS
