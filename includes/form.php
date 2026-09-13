@@ -1,12 +1,12 @@
 <?php if (!defined('ABSPATH')) exit; ?>
 
-<h4><?php $text = 'Display Options'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Display Options', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
-<p><label for="<?php echo esc_attr( $field_ids[ 'title' ] ); ?>"><?php $text = 'Title for the widget'; esc_html_e( $text ); ?></label>
-<input class="widefat" id="<?php echo esc_attr( $field_ids[ 'title' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" placeholder="<?php $text = 'Recent Posts'; esc_html_e( $text ); ?>" /><br />
+<p><label for="<?php echo esc_attr( $field_ids[ 'title' ] ); ?>"><?php esc_html_e( 'Title for the widget', 'recent-posts-widget-with-thumbnails' ); ?></label>
+<input class="widefat" id="<?php echo esc_attr( $field_ids[ 'title' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" placeholder="<?php esc_html_e( 'Recent Posts', 'recent-posts-widget-with-thumbnails' ); ?>" /><br />
 <em><?php esc_html_e( 'This field can be empty.', 'recent-posts-widget-with-thumbnails' );?></em></p>
 
-<p><label for="<?php echo esc_attr( $field_ids[ 'number_posts' ] ); ?>"><?php $text = 'Number of posts to show:'; esc_html_e( $text ); ?></label>
+<p><label for="<?php echo esc_attr( $field_ids[ 'number_posts' ] ); ?>"><?php esc_html_e( 'Number of posts to show:', 'recent-posts-widget-with-thumbnails' ); ?></label>
 <input id="<?php echo esc_attr( $field_ids[ 'number_posts' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number_posts' ) ); ?>" type="text" value="<?php echo absint( $ints[ 'number_posts' ] ); ?>" size="3" /></p>
 
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'open_new_window' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'open_new_window' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'open_new_window' ) ); ?>" />
@@ -32,7 +32,7 @@
     </select>
 </p>
 
-<h4><?php $text = 'Sticky'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Sticky', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'only_sticky_posts' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'only_sticky_posts' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'only_sticky_posts' ) ); ?>" />
 <label for="<?php echo esc_attr( $field_ids[ 'only_sticky_posts' ] ); ?>"><?php esc_html_e( 'Show only sticky posts?', 'recent-posts-widget-with-thumbnails' ); ?><br />
@@ -45,7 +45,7 @@
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'keep_sticky' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'keep_sticky' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'keep_sticky' ) ); ?>" />
 <label for="<?php echo esc_attr( $field_ids[ 'keep_sticky' ] ); ?>"><?php esc_html_e( 'Keep sticky posts on top of the list?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
 
-<h4><?php $text = 'Title'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Title', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'hide_title' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'hide_title' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'hide_title' ) ); ?>" />
 <label for="<?php echo esc_attr( $field_ids[ 'hide_title' ] ); ?>"><?php esc_html_e( 'Do not show post title?', 'recent-posts-widget-with-thumbnails' ); ?><br />
@@ -54,7 +54,7 @@
 <p><label for="<?php echo esc_attr( $field_ids[ 'post_title_length' ] ); ?>"><?php esc_html_e( 'Maximum length of post title', 'recent-posts-widget-with-thumbnails' ); ?>:</label>
 <input id="<?php echo esc_attr( $field_ids[ 'post_title_length' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'post_title_length' ) ); ?>" type="text" value="<?php echo absint( $ints[ 'post_title_length' ] ); ?>" size="3" /></p>
 
-<h4><?php $text = 'Author'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Author', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'show_author' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'show_author' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_author' ) ); ?>" />
 <label for="<?php echo esc_attr( $field_ids[ 'show_author' ] ); ?>"><?php esc_html_e( 'Show post author?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
@@ -63,7 +63,7 @@
 <input class="widefat" id="<?php echo esc_attr( $field_ids[ 'author_label' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'author_label' ) ); ?>" type="text" value="<?php echo esc_attr( $optional_texts[ 'author_label' ] ); ?>" placeholder="<?php echo esc_attr( $this->defaults[ 'author_label' ] ); ?>" /><br />
 <em><?php esc_html_e( 'This field can be empty.', 'recent-posts-widget-with-thumbnails' );?> <?php esc_html_e( 'A space will be added automatically between the label and the name.', 'recent-posts-widget-with-thumbnails' );?></em></p>
 
-<h4><?php $text = 'Categories'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Categories', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'show_categories' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'show_categories' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_categories' ) ); ?>" />
 <label for="<?php echo esc_attr( $field_ids[ 'show_categories' ] ); ?>"><?php esc_html_e( 'Show post categories?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
@@ -75,12 +75,12 @@
 <input class="widefat" id="<?php echo esc_attr( $field_ids[ 'category_label' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'category_label' ) ); ?>" type="text" value="<?php echo esc_attr( $optional_texts[ 'category_label' ] ); ?>" placeholder="<?php echo esc_attr( $this->defaults[ 'category_label' ] ); ?>" /><br />
 <em><?php esc_html_e( 'This field can be empty.', 'recent-posts-widget-with-thumbnails' );?> <?php esc_html_e( 'A space will be added automatically between the label and the name.', 'recent-posts-widget-with-thumbnails' );?></em></p>
 
-<h4><?php $text = 'Date'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Date', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'show_date' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'show_date' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_date' ) ); ?>" />
 <label for="<?php echo esc_attr( $field_ids[ 'show_date' ] ); ?>"><?php esc_html_e( 'Show post date?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
 
-<h4><?php $text = 'Excerpt'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Excerpt', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'show_excerpt' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'show_excerpt' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_excerpt' ) ); ?>" />
 <label for="<?php echo esc_attr( $field_ids[ 'show_excerpt' ] ); ?>"><?php esc_html_e( 'Show excerpt?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
@@ -102,18 +102,18 @@
 <label for="<?php echo esc_attr( $field_ids[ 'ignore_post_content_excerpt' ] ); ?>"><?php esc_html_e( 'Ignore post content as excerpt source?', 'recent-posts-widget-with-thumbnails' ); ?></label><br />
 <em><?php esc_html_e( 'If activated, the excerpts are created only by the excerpt fields. If both Ignore checkboxes are activated no excerpts are displayed in the list.', 'recent-posts-widget-with-thumbnails' );?></em></p>
 
-<h4><?php $text = 'Comments'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Comments', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'show_comments_number' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'show_comments_number' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_comments_number' ) ); ?>" />
 <label for="<?php echo esc_attr( $field_ids[ 'show_comments_number' ] ); ?>"><?php esc_html_e( 'Show number of comments?', 'recent-posts-widget-with-thumbnails' ); ?></label></p>
 
-<h4><?php $text = 'Filter by category'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Filter by category', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
 <p><label for="<?php echo esc_attr( $field_ids[ 'category_ids' ] ); ?>"><?php esc_html_e( 'Show posts of selected categories only?', 'recent-posts-widget-with-thumbnails' ); ?></label><br />
 <?php echo wp_kses( $selection_element, array( 'select' => array( 'name' => true, 'id' => true, 'class' => true, 'multiple' => true, 'size' => true ), 'option' => array( 'value' => true, 'selected' => true ) ) ); ?><br />
 <em><?php printf( esc_html__( 'Click on the categories with pressed CTRL key to select multiple categories. If &#8220;%s&#8221; was selected then other selections will be ignored.', 'recent-posts-widget-with-thumbnails' ), esc_html( $label_all_cats ) ); ?></em></p>
 
-<h4><?php $text = 'Thumbnail Settings'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Thumbnail Settings', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'show_thumb' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'show_thumb' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_thumb' ) ); ?>" />
 <label for="<?php echo esc_attr( $field_ids[ 'show_thumb' ] ); ?>"><?php esc_html_e( 'Show thumbnail?', 'recent-posts-widget-with-thumbnails' ); ?></label><br>
@@ -162,15 +162,13 @@ foreach ( $size_options as $option ) {
 <p><label for="<?php echo esc_attr( $field_ids[ 'thumb_alt' ] ); ?>"><?php esc_html_e( 'Alt text of the default thumbnail:', 'recent-posts-widget-with-thumbnails' ); ?></label>
 <input class="widefat" id="<?php echo esc_attr( $field_ids[ 'thumb_alt' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'thumb_alt' ) ); ?>" type="text" value="<?php echo esc_attr( $optional_texts[ 'thumb_alt' ] ); ?>" placeholder="<?php echo esc_attr( $this->defaults[ 'thumb_alt' ] ); ?>" /><br />
 <em><?php 
-$text_1 = '<a href="%1$s" %2$s>Describe the purpose of the image%3$s</a>. Leave empty if the image is purely decorative.';
-$text_2 = '(opens in a new tab)';
 echo wp_kses_post( sprintf(
-	__( $text_1 ),
+	__( '<a href="%1$s" %2$s>Describe the purpose of the image%3$s</a>. Leave empty if the image is purely decorative.', 'recent-posts-widget-with-thumbnails' ),
 	esc_url( 'https://www.w3.org/WAI/tutorials/images/decision-tree' ),
 	'target="_blank" rel="noopener noreferrer"',
 	sprintf(
 		'<span class="screen-reader-text"> %s</span>',
-		esc_html__( $text_2 )
+		esc_html__( '(opens in a new tab)', 'recent-posts-widget-with-thumbnails' )
 	)
 ) );?></em></p>
 
@@ -178,7 +176,7 @@ echo wp_kses_post( sprintf(
 <label for="<?php echo esc_attr( $field_ids[ 'hide_alt_texts' ] ); ?>"><?php esc_html_e( 'Omit alternative texts of the thumbnails?', 'recent-posts-widget-with-thumbnails' ); ?></label><br>
 <em><?php esc_html_e( 'Activate this option to eliminate possible confusion when the alternative texts and the post titles do not refer to each other. This can improve the accessibility of the post list. Do not activate this option if the post titles are hidden.', 'recent-posts-widget-with-thumbnails' ); ?></em></p>
 
-<h4><?php $text = 'Additional settings'; esc_html_e( $text ); ?></h4>
+<h4><?php esc_html_e( 'Additional settings', 'recent-posts-widget-with-thumbnails' ); ?></h4>
 
 <p><input class="checkbox" type="checkbox" <?php checked( $bools[ 'print_post_categories' ] ); ?> id="<?php echo esc_attr( $field_ids[ 'print_post_categories' ] ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'print_post_categories' ) ); ?>" />
 <label for="<?php echo esc_attr( $field_ids[ 'print_post_categories' ] ); ?>"><?php esc_html_e( 'Print slugs of post categories in class attribute of LI elements?', 'recent-posts-widget-with-thumbnails' ); ?></label><br />

@@ -246,14 +246,10 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		if ( $r->have_posts() ) :
 		
 			// translate repeately used texts once (for more performance)
-			$text = ', ';
-			$this->defaults[ 'comma' ] = __( $text );
-			$text = '&hellip;';
-			$this->defaults[ 'ellipses' ] = __( $text );
-			$text = '(no title)';
-			$this->defaults[ 'no_title' ] = __( $text );
-			$text = 'Post';
-			$this->defaults[ 'Post' ] = _x( $text, 'post type singular name' );
+			$this->defaults[ 'comma' ] = __( ', ', 'recent-posts-widget-with-thumbnails' );
+			$this->defaults[ 'ellipses' ] = __( '&hellip;', 'recent-posts-widget-with-thumbnails' );
+			$this->defaults[ 'no_title' ] = __( '(no title)', 'recent-posts-widget-with-thumbnails' );
+			$this->defaults[ 'Post' ] = _x( 'Post', 'post type singular name', 'recent-posts-widget-with-thumbnails' );
 			
 			// get current post ID
 			$queried_object_id = get_queried_object_id();
@@ -472,10 +468,10 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
         // get texts and values for image sizes dropdown
 		global $_wp_additional_image_sizes;
 		$wp_standard_image_size_labels = array();
-		$label = 'Full Size';	$wp_standard_image_size_labels[ 'full' ]		= __( $label );
-		$label = 'Large';		$wp_standard_image_size_labels[ 'large' ]		= __( $label );
-		$label = 'Medium';		$wp_standard_image_size_labels[ 'medium' ]		= __( $label );
-		$label = 'Thumbnail';	$wp_standard_image_size_labels[ 'thumbnail' ]	= __( $label );
+		$wp_standard_image_size_labels[ 'full' ] = __( 'Full Size', 'recent-posts-widget-with-thumbnails' );
+		$wp_standard_image_size_labels[ 'large' ] = __( 'Large', 'recent-posts-widget-with-thumbnails' );
+		$wp_standard_image_size_labels[ 'medium' ] = __( 'Medium', 'recent-posts-widget-with-thumbnails' );
+		$wp_standard_image_size_labels[ 'thumbnail' ] = __( 'Thumbnail', 'recent-posts-widget-with-thumbnails' );
 		
 		$wp_standard_image_size_names = array_keys( $wp_standard_image_size_labels );
 		$size_options = array();
@@ -498,8 +494,8 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		}
 
 		// create text to Media Settings page
-		$text = 'Settings';	$label_settings	= __( $text );
-		$text = 'Media';	$label_media	= _x( $text, 'post type general name' );
+		$label_settings = __( 'Settings', 'recent-posts-widget-with-thumbnails' );
+		$label_media = _x( 'Media', 'post type general name', 'recent-posts-widget-with-thumbnails' );
 		$label = sprintf( '%s &rsaquo; %s', $label_settings, $label_media );
 		$media_trail = ( current_user_can( 'manage_options' ) ) ? sprintf( '<a href="%s" target="_blank">%s</a>', esc_url( admin_url( 'options-media.php' ) ), esc_html( $label ) ) : sprintf( '<em>%s</em>', esc_html( $label ) );
 
@@ -807,8 +803,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		}
 
 		if ( empty( $terms ) ) {
-			$text = 'No categories';
-			return __( $text );
+			return __( 'No categories', 'recent-posts-widget-with-thumbnails' );
 		}
 
 		$categories = array();
@@ -956,8 +951,7 @@ class Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		$excerpt = '';
 		
 		if ( post_password_required( $post ) ) {
-			$excerpt = 'There is no excerpt because this is a protected post.';
-			return esc_html__( $excerpt );
+			return esc_html__( 'There is no excerpt because this is a protected post.', 'recent-posts-widget-with-thumbnails' );
 		}
 
 		// get excerpt from text field if desired
