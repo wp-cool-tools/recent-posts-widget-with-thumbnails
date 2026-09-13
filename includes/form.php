@@ -1,3 +1,5 @@
+<?php if (!defined('ABSPATH')) exit; ?>
+
 <h4><?php $text = 'Display Options'; esc_html_e( $text ); ?></h4>
 
 <p><label for="<?php echo $field_ids[ 'title' ]; ?>"><?php $text = 'Title for the widget'; esc_html_e( $text ); ?></label>

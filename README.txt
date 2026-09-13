@@ -5,7 +5,7 @@ Tags: recent posts, widget, thumbnails, featured image, sidebar
 Requires at least: 2.9
 Requires PHP: 5.2
 Tested up to: 7.1
-Stable tag: 7.1.1
+Stable tag: 7.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -237,6 +237,8 @@ If you want to contribute a translation of the plugin in your language it would 
 2. The second screenshot shows the widget on the Widget Management Page in the backend.
 
 == Changelog ==
+= 7.2.0 =
+* Added direct file access prevention
 
 = 7.1.1 =
 * Restored PHP 5.x support

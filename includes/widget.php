@@ -1,4 +1,8 @@
-<?php echo $args[ 'before_widget' ] . "\n"; ?>
+<?php
+if (!defined('ABSPATH')) exit;
+
+echo $args[ 'before_widget' ] . "\n";
+?>
 <div id="rpwwt-<?php echo $args[ 'widget_id' ];?>" class="rpwwt-widget">
 <?php 
 	if ( $title ) echo $args[ 'before_title' ] . $title . $args[ 'after_title' ] . "\n";
